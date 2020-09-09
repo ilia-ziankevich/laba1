@@ -70,6 +70,22 @@ public class Complex {
         im += b.im;
         return this;
     }
+    
+    public Complex swap(Complex b)
+    {
+    	double a;
+    	a = b.im;
+    	b.im = b.re;
+    	b.re = a;
+    	return this;
+    }
+    
+    public Complex pow(Complex b, double c)
+    {
+    	b.re = Math.pow(b.re,c);
+    	b.re = Math.pow(b.im,c);
+    	return this;
+    }
 
     /**
      * Multiply operation.
